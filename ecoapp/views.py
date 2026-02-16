@@ -5,7 +5,7 @@ def index(request):
     return render(request,template_name='index.html')
 
 def about_us(request):
-    return render(request,template_name='about_us.html')
+    return render(request, 'about_us.html')
 
 
 def contact_us(request):
