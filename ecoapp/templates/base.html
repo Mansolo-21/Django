@@ -3,36 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="icon" href="static/images/Logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css"> 
     <title>{%block title%} Ecotech {%endblock%}</title>
-</head>
+    </head>
 <body>
-    <nav class="navbar bg-success navbar-expand-lg navbar-light ">
-    <div class="px-7">
-    <a href="#" class="navbar-brand">
-        <img src="{% static 'images/Logo.png'%}" alt="" class="rounded-circle">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#safari">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    </div>
-    <div id="safari" class="collapse navbar-collapse">
-        <ul class="navbar-nav fw-bold fs-1">
-            <li class="nav-item">
-                <a href="{% url 'index' %}" class="nav-link text-white">Home</a>
-            </li>
-            <li class="nav-item ">
-                <a href="{% url 'about_us' %}" class="nav-link text-white">About Us</a>
-            </li>
-            <li class="nav-item ">
-                <a href="{% url 'services' %}" class="nav-link text-white">Services</a>
-            </li>
-            <li class="nav-item ">
-                <a href="{% url 'contact_us' %}" class="nav-link text-white">Contact Us</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'images/Logo.png' %}" alt="Logo" width="40" height="40"
+                 class="rounded-circle">
+        </a>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-bold">
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link text-white">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about_us' %}" class="nav-link text-white">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'services' %}" class="nav-link text-white">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact_us' %}" class="nav-link text-white">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </nav>
 <div class="container">
@@ -74,6 +88,6 @@
     </div>
 
  </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

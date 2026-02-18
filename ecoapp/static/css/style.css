@@ -1,4 +1,4 @@
-body {
-  background-color: lightblue;
-  font-family: verdana;
+.myimage {
+    height: 500px;          /* choose a height you like */
+    object-fit: cover;      /* fills area without distortion */
 }
