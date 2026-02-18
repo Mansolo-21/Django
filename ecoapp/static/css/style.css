@@ -1,4 +1,4 @@
 .myimage {
-    height: 500px;          /* choose a height you like */
-    object-fit: cover;      /* fills area without distortion */
-}
+    height: 500px;          
+    object-fit: cover;      
+
